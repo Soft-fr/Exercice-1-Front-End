@@ -1,34 +1,157 @@
-.p-jcvd {
-    letter-spacing: 1.5px;
-    font-size: 2em;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.jcvd-img {
-    width: 50%;
-    height: auto;
-}
-
-
-.chanson {
-    width: 25%;
-    margin: auto;
+header {
+    height: 6em;
     display: flex;
+    align-items: center;
     justify-content: center;
-    line-height: 2.5em;
 }
 
-.cdm-img {
-    width: 10em;
-    height: auto;
+.nav-links{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgb(96, 188, 219);
+    position: fixed;
+}
+
+.nav-links li{
+    list-style: none;
+    margin: 0 12px;
+}
+
+.nav-links li a{
+    position: relative;
+    color: #36454f;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: rgb(96, 188, 219);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.nav-links li.forward a:before{
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.nav-links li.forward a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Poppins, sans-serif;
+}
+
+#JCVD h2 {
+    color: rgb(96, 188, 219);
+    letter-spacing: 3px;
+}
+
+#JCVD img {
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+
+#JCVD p {
+    text-align: center;
+}
+
+#PS h2 {
+    color: rgb(96, 188, 219);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+#PS p {
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+
+#CDM h2 {
+    color: rgb(96, 188, 219);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+#CDM img {
+    width: 10rem;
+    margin-bottom: 30px;
+}
+
+#CDM ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#CDM ol li {
+    margin: 40px;
+    color:rgb(96, 188, 219);
+}
+
+#CDM p a {
+    text-decoration: none;
+    color:rgb(96, 188, 219);
 }
 
 table, td {
-    border: 1px solid #333;
+    border: 2px solid #333;
     width: 50%;
     margin: auto;
+    text-align: center;
+}
+
+#TA img {
+    width: 10em;
 }
 
 .form {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.top {
+    text-decoration: none;
+    transition: 0.5s ease;
+    color: rgb(96, 188, 219);
+    margin-top: 2em;
+}
+
+.top:hover {
+    transform: rotateZ(360deg);
 }
